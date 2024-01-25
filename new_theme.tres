@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://ckybxftcl1lrw"]
+
+[ext_resource type="Texture2D" uid="uid://c4b32rla5g4op" path="res://assets/UI_border.png" id="1_irauk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wkpa3"]
+texture = ExtResource("1_irauk")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uv87q"]
+texture = ExtResource("1_irauk")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_wkpa3")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_uv87q")

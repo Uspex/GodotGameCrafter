@@ -1,0 +1,209 @@
+[gd_scene load_steps=22 format=3 uid="uid://qu1hnl6n5eek"]
+
+[ext_resource type="Texture2D" uid="uid://dx0dv6piq0fr3" path="res://assets/Sprites/Obelisk_effects.png" id="1_pgc8w"]
+[ext_resource type="Script" path="res://scn/build/spawner.gd" id="1_xe8c4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jah4h"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(0, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8iid"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(190, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrh6c"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(0, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38dgn"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(380, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dh5v"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(570, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_665lk"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(760, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0pq2"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(950, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ka0mv"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(1140, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kqyy"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(1330, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41jyk"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(1520, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0q32a"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(1710, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ampcb"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(1900, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjse6"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(2090, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho3kw"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(2280, 0, 190, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2hyt"]
+atlas = ExtResource("1_pgc8w")
+region = Rect2(2470, 0, 190, 380)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_86nve"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jah4h")
+}],
+"loop": false,
+"name": &"Idel",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8iid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrh6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38dgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dh5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_665lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0pq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ka0mv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kqyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41jyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0q32a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ampcb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjse6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ho3kw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2hyt")
+}],
+"loop": false,
+"name": &"Spawn",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_0nb1y"]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Idel"]
+}
+
+[sub_resource type="Animation" id="Animation_we6mv"]
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Spawn"]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"mushroom_spawn"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bqy3y"]
+_data = {
+"Idel": SubResource("Animation_0nb1y"),
+"Spawn": SubResource("Animation_we6mv")
+}
+
+[node name="Spawner" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_xe8c4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_86nve")
+animation = &"Idel"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bqy3y")
+}
