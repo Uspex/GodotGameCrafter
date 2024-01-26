@@ -1,5 +1,6 @@
-# Курс по Godot от канала GameCrafter
+# Курс по Godot от канала GameCrafter с 1 по 29 урок
 
 [Как начать делать ИГРЫ в GODOT 4](https://youtu.be/z23MQ2xad30?si=yQlZqb9UIZUN-K3S)
+
 
 **Для меня это один из лучших рускоязычных курсов**
