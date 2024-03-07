@@ -16,11 +16,12 @@ const SPEED = 120.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-@onready var anim = $AnimatedSprite2D
 @onready var animPlayer = $AnimationPlayer
 @onready var stats = $Stats
 @onready var leafs = $Leafs
 @onready var smack = $Sounds/Smack
+@onready var animated_sprite = $AnimatedSprite2D
+
 
 
 
@@ -87,10 +88,10 @@ func move_state():
 			animPlayer.play('idle')
 			
 	if direction == -1:
-		$AnimatedSprite2D.flip_h = true
+		animated_sprite.flip_h = true
 		$AttackDirection.rotation_degrees = 180
 	elif direction == 1:
-		$AnimatedSprite2D.flip_h = false
+		animated_sprite.flip_h = false
 		$AttackDirection.rotation_degrees = 0
 	
 	if Input.is_action_pressed("run") and not recovery:
@@ -130,7 +131,7 @@ func attack_state():
 	
 func combo1():
 	combo = true
-	await anim.animation_finished	
+	await animated_sprite.animation_finished	
 	combo = false
 	
 func combo1_state():
@@ -146,7 +147,7 @@ func combo1_state():
 
 func combo2():
 	combo = true
-	await anim.animation_finished	
+	await animated_sprite.animation_finished	
 	combo = false
 
 func combo2_state():
@@ -208,14 +209,14 @@ func _on_stats_no_stamina():
 
 func damage_anim():
 	velocity.x = 0
-	self.modulate = Color(1, 0, 0, 1)
-	if $AnimatedSprite2D.flip_h == true:
+	animated_sprite.modulate = Color(1, 0, 0, 1)
+	if animated_sprite.flip_h == true:
 		velocity.x += 200
 	else:
 		velocity.x -= 200
 	var tween = get_tree().create_tween()
-	tween.parallel().tween_property(self, "velocity", Vector2(0, 0), 0.2)
-	tween.parallel().tween_property(self, "modulate", Color(1, 1, 1, 1), 0.2)
+	tween.parallel().tween_property(animated_sprite, "velocity", Vector2(0, 0), 0.2)
+	tween.parallel().tween_property(animated_sprite, "modulate", Color(1, 1, 1, 1), 0.2)
 
 func steps():
 	leafs.emitting = true

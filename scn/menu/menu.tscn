@@ -28,7 +28,6 @@ text = "Quit"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_oaat3")
-volume_db = -20.0
 autoplay = true
 
 [node name="MusicButtons" type="AudioStreamPlayer" parent="."]
