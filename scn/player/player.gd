@@ -20,6 +20,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var stats = $Stats
 @onready var leafs = $Leafs
 @onready var smack = $Sounds/Smack
+
 @onready var animated_sprite = $AnimatedSprite2D
 
 
